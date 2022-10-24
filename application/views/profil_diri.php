@@ -29,7 +29,7 @@
                             <div class="d-flex">
                                 <div class="row">
                                     <div class="col-md-2 col-xs-12">
-                                        <img src="<?= base_url('assets/dist/img/avatar.png')?>" alt="tidak muncul" class="img-thumbnail">
+                                        <img src="<?= base_url('assets/dist/img/adf.jpg')?>" alt="tidak muncul" class="img-thumbnail">
                                     </div>
                                 </div>
                             </div>
