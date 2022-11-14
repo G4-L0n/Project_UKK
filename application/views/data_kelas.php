@@ -22,13 +22,21 @@
                     <div class="card">
                         <div class="card-header border-0">
                             <div class="d-flex justify-content-between">
-                                <h3 class="card-title">Profil diri</h3>
+                                <h3 class="card-title">Data kelas</h3>
                             </div>
                         </div>
                         <div class="card-body">
-                            <div class="table table-striped">
-
-                            </div>
+                            <table class="table table-striped">
+                                <thead>
+                                    <tr>
+                                        <th>No</th>
+                                        <th>Kelas</th>
+                                        <th>Jurusan</th>
+                                        <th>Jumlah Siswa</th>
+                                        <th>#</th>
+                                    </tr>
+                                </thead>
+                            </table>
                         </div>
                     </div>
             <!-- /.card -->

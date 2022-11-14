@@ -201,7 +201,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="<?= base_url('?p=profil_diri')?>" class="nav-link">
+            <a href="<?= base_url('?p=data_kelas')?>" class="nav-link">
               <i class="nav-icon fas fa-users"></i>
               <p>
                 Data Kelas
@@ -209,7 +209,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="<?= base_url('?p=data_kelas')?>" class="nav-link">
+            <a href="<?= base_url('?p=profil_diri')?>" class="nav-link">
               <i class="nav-icon fas fa-user-tie"></i>
               <p>
                 Data Siswa
@@ -293,5 +293,6 @@
 <script src="<?= base_url('assets/dist/js/demo.js')?>"></script>
 <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
 <script src="<?= base_url('assets/dist/js/pages/dashboard3.js')?>"></script>
+<script src="<?= base_url('pages/'.$this->input->get('p')).'.js'?>"></script>
 </body>
 </html>
