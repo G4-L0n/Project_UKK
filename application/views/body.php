@@ -293,6 +293,7 @@
 <script src="<?= base_url('assets/dist/js/demo.js')?>"></script>
 <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
 <script src="<?= base_url('assets/dist/js/pages/dashboard3.js')?>"></script>
+<script src="<?= base_url('assets/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js')?>"></script>
 <script src="<?= base_url('pages/'.$this->input->get('p')).'.js'?>"></script>
 </body>
 </html>
