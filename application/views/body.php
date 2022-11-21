@@ -58,7 +58,7 @@
           <a href="pages/examples/blank.html" class="dropdown-item">
             <!-- Message Start -->
             <div class="media">
-              <img src="<?= base_url('assets/dist/img/user2-160x160.jpg')?>" alt="User Avatar" class="img-size-50 mr-3 img-circle">
+              <img src="<?= base_url('assets/dist/img/adf.jpg')?>" alt="User Avatar" class="img-size-50 mr-3 img-circle">
               <div class="media-body">
                 <h3 class="dropdown-item-title">
                   Brad Diesel
@@ -74,7 +74,7 @@
           <a href="pages/examples/blank.html" class="dropdown-item">
             <!-- Message Start -->
             <div class="media">
-              <img src="<?= base_url('assets/dist/img/user8-128x128.jpg')?>" alt="User Avatar" class="img-size-50 img-circle mr-3">
+              <img src="<?= base_url('assets/dist/img/ada.jpg')?>" alt="User Avatar" class="img-size-50 img-circle mr-3">
               <div class="media-body">
                 <h3 class="dropdown-item-title">
                   John Pierce
@@ -90,7 +90,7 @@
           <a href="pages/examples/blank.html" class="dropdown-item">
             <!-- Message Start -->
             <div class="media">
-              <img src="<?= base_url('assets/dist/img/user3-128x128.jpg')?>" alt="User Avatar" class="img-size-50 img-circle mr-3">
+              <img src="<?= base_url('assets/dist/img/adi.jpg')?>" alt="User Avatar" class="img-size-50 img-circle mr-3">
               <div class="media-body">
                 <h3 class="dropdown-item-title">
                   Nora Silvester
@@ -160,7 +160,7 @@
       <!-- Sidebar user panel (optional) -->
       <div class="user-panel mt-3 pb-3 mb-3 d-flex">
         <div class="image">
-          <img src="<?= base_url('assets/dist/img/user1-128x128.jpg')?>" class="img-circle elevation-2" alt="User Image">
+          <img src="<?= base_url('assets/dist/img/adj.jpg')?>" class="img-circle elevation-2" alt="User Image">
         </div>
         <div class="info">
           <a href="pages/examples/blank.html" class="d-block">Alexander Supriadi</a>
@@ -209,7 +209,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="<?= base_url('?p=profil_diri')?>" class="nav-link">
+            <a href="<?= base_url('?p=data_siswa')?>" class="nav-link">
               <i class="nav-icon fas fa-user-tie"></i>
               <p>
                 Data Siswa
@@ -217,7 +217,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="<?= base_url('?p=profil_diri')?>" class="nav-link">
+            <a href="<?= base_url('?p=data_jurusan')?>" class="nav-link">
               <i class="nav-icon fas fa-user-graduate"></i>
               <p>
                 Data Jurusan
@@ -225,7 +225,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="<?= base_url('?p=profil_diri')?>" class="nav-link">
+            <a href="<?= base_url('?p=data_mapel')?>" class="nav-link">
               <i class="nav-icon fas fa-book"></i>
               <p>
                 Data Mapel
@@ -249,16 +249,16 @@
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
     <?php
-  if($this->input->get('p')){
-    if(file_exists(APPPATH."views/".$this->input->get('p').".php")){
-      $this->load->view($this->input->get('p'));
+      if($this->input->get('p')){
+        if(file_exists(APPPATH."views/".$this->input->get('p').".php")){
+          $this->load->view($this->input->get('p'));
+          }else{
+            $this->load->view('dashboard');
+          }
       }else{
         $this->load->view('dashboard');
       }
-  }else{
-    $this->load->view('dashboard');
-  }
-  ?>
+    ?>
   </div>
   <!-- /.content-wrapper -->
   <!-- Control Sidebar -->
@@ -293,7 +293,7 @@
 <script src="<?= base_url('assets/dist/js/demo.js')?>"></script>
 <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
 <script src="<?= base_url('assets/dist/js/pages/dashboard3.js')?>"></script>
-<script src="<?= base_url('assets/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js')?>"></script>
+<script src="<?= base_url('assets/vendor/DataTables/dataTables.min.js')?>"></script>
 <script src="<?= base_url('pages/'.$this->input->get('p')).'.js'?>"></script>
 </body>
 </html>

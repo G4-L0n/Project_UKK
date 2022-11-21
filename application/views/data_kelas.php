@@ -36,6 +36,16 @@
                                         <th>#</th>
                                     </tr>
                                 </thead>
+                                <?php $a = 1;?>
+                                <tbody>
+                                    <tr>
+                                        <td><?= $a++?></td>
+                                        <td>P{PP</td>
+                                        <td>P{PP</td>
+                                        <td>P{PP</td>
+                                        <td>P{PP</td>
+                                    </tr>
+                                </tbody>
                             </table>
                         </div>
                     </div>
