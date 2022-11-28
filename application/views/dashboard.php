@@ -85,8 +85,8 @@
                   <tbody>
                   <tr>
                     <td>
-                      <img src="<?= base_url('assets/dist/img/default-150x150.png')?>" alt="Product 1" class="img-circle img-size-32 mr-2">
-                      Some Product
+                      <img src="<?= base_url('assets/dist/img/adf.jpg')?>" alt="Product 1" class="img-circle img-size-32 mr-2">
+                      Falcon
                     </td>
                     <td>$13 USD</td>
                     <td>
@@ -104,8 +104,8 @@
                   </tr>
                   <tr>
                     <td>
-                      <img src="<?= base_url('assets/dist/img/default-150x150.png')?>" alt="Product 1" class="img-circle img-size-32 mr-2">
-                      Another Product
+                      <img src="<?= base_url('assets/dist/img/adg.jpg')?>" alt="Product 1" class="img-circle img-size-32 mr-2">
+                      Pohon Tebal
                     </td>
                     <td>$29 USD</td>
                     <td>
@@ -123,10 +123,10 @@
                   </tr>
                   <tr>
                     <td>
-                      <img src="<?= base_url('assets/dist/img/default-150x150.png')?>" alt="Product 1" class="img-circle img-size-32 mr-2">
-                      Amazing Product
+                      <img src="<?= base_url('assets/dist/img/adh.jpg')?>" alt="Product 1" class="img-circle img-size-32 mr-2">
+                      Bocil kungfu
                     </td>
-                    <td>$1,230 USD</td>
+                    <td>$1.230 USD</td>
                     <td>
                       <small class="text-danger mr-1">
                         <i class="fas fa-arrow-down"></i>
@@ -142,8 +142,8 @@
                   </tr>
                   <tr>
                     <td>
-                      <img src="<?= base_url('assets/dist/img/default-150x150.png')?>" alt="Product 1" class="img-circle img-size-32 mr-2">
-                      Perfect Item
+                      <img src="<?= base_url('assets/dist/img/adi.jpg')?>" alt="Product 1" class="img-circle img-size-32 mr-2">
+                      Mayonaise
                       <span class="badge bg-danger">NEW</span>
                     </td>
                     <td>$199 USD</td>

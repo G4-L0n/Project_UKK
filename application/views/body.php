@@ -58,13 +58,13 @@
           <a href="pages/examples/blank.html" class="dropdown-item">
             <!-- Message Start -->
             <div class="media">
-              <img src="<?= base_url('assets/dist/img/adf.jpg')?>" alt="User Avatar" class="img-size-50 mr-3 img-circle">
+              <img src="<?= base_url('assets/dist/img/adk.jpg')?>" alt="User Avatar" class="img-size-50 mr-3 img-circle">
               <div class="media-body">
                 <h3 class="dropdown-item-title">
-                  Palkon
+                  Muhammad Sumbul
                   <span class="float-right text-sm text-danger"><i class="fas fa-star"></i></span>
                 </h3>
-                <p class="text-sm">Palkon</p>
+                <p class="text-sm">Miow</p>
                 <p class="text-sm text-muted"><i class="far fa-clock mr-1"></i> 4 Hours Ago</p>
               </div>
             </div>
@@ -74,13 +74,13 @@
           <a href="pages/examples/blank.html" class="dropdown-item">
             <!-- Message Start -->
             <div class="media">
-              <img src="<?= base_url('assets/dist/img/ada.jpg')?>" alt="User Avatar" class="img-size-50 img-circle mr-3">
+              <img src="<?= base_url('assets/dist/img/ade.jpg')?>" alt="User Avatar" class="img-size-50 img-circle mr-3">
               <div class="media-body">
                 <h3 class="dropdown-item-title">
-                  Presiden
+                  Rafi
                   <span class="float-right text-sm text-muted"><i class="fas fa-star"></i></span>
                 </h3>
-                <p class="text-sm">Ya gak tau kok tanya saya</p>
+                <p class="text-sm">Farhan Kebab</p>
                 <p class="text-sm text-muted"><i class="far fa-clock mr-1"></i> 4 Hours Ago</p>
               </div>
             </div>
@@ -90,13 +90,13 @@
           <a href="pages/examples/blank.html" class="dropdown-item">
             <!-- Message Start -->
             <div class="media">
-              <img src="<?= base_url('assets/dist/img/adi.jpg')?>" alt="User Avatar" class="img-size-50 img-circle mr-3">
+              <img src="<?= base_url('assets/dist/img/adb.jpg')?>" alt="User Avatar" class="img-size-50 img-circle mr-3">
               <div class="media-body">
                 <h3 class="dropdown-item-title">
-                  Pesulap Selai Putih
+                  Dwi Artanto
                   <span class="float-right text-sm text-warning"><i class="fas fa-star"></i></span>
                 </h3>
-                <p class="text-sm">Ini fakta</p>
+                <p class="text-sm">Solat</p>
                 <p class="text-sm text-muted"><i class="far fa-clock mr-1"></i> 4 Hours Ago</p>
               </div>
             </div>
