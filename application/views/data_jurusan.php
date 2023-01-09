@@ -23,6 +23,10 @@
                         <div class="card-header border-0">
                             <div class="d-flex justify-content-between">
                                 <h3 class="card-title">Data Jurusan</h3>
+                                <!-- Button trigger modal -->
+                                <button type="button" class="btn btn-primary" data-toggle="modal" data-backdrop="static" data-target="#exampleModal">
+                                  <i class="fas fa-plus-circle"></i>&nbsp;Tambah Data
+                                </button>
                             </div>
                         </div>
                         <div class="card-body">
@@ -39,7 +43,7 @@
                                     <tr>
                                         <td><?= $a++?></td>
                                         <td>P{PP</td>
-                                        <td>P{PP</td>
+                                        <td>P</td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -82,7 +86,7 @@
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
+        <button id="simpan" type="button" class="btn btn-primary">Save changes</button>
       </div>
     </div>
   </div>

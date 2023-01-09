@@ -43,11 +43,11 @@
                                 <?php $a = 1;?>
                                 <tbody>
                                     <tr>
-                                        <td><?= $a++?></td>
-                                        <td>P{PP</td>
-                                        <td>P{PP</td>
-                                        <td>P{PP</td>
-                                        <td>P{PP</td>
+                                        <td><?= $a++ ?></td>
+                                        <td>FFF</td>
+                                        <td>AAA</td>
+                                        <td>TTT</td>
+                                        <td>SSS</td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -92,7 +92,7 @@
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
+        <button id="simpan" type="button" class="btn btn-primary">Save changes</button>
       </div>
     </div>
   </div>

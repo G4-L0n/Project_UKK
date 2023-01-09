@@ -184,8 +184,8 @@
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
-          <li class="nav-item menu-open">
-            <a href="./" class="nav-link active">
+          <li class="nav-item">
+            <a href="./" class="nav-link">
               <i class="nav-icon fas fa-tachometer-alt"></i>
               <p>
                 Dashboard
@@ -233,7 +233,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="<?= base_url('?p=profil_diri')?>" class="nav-link">
+            <a href="<?= base_url('?p=grafik_siswa')?>" class="nav-link">
               <i class="nav-icon fas fa-signal"></i>
               <p>
                 Grafik siswa
@@ -281,6 +281,9 @@
 <!-- REQUIRED SCRIPTS -->
 
 <!-- jQuery -->
+<script>
+  var base_url = "<?= base_url()."index.php/" ?>";
+</script>
 <script src="<?= base_url('assets/plugins/jquery/jquery.min.js')?>"></script>
 <!-- Bootstrap -->
 <script src="<?= base_url('assets/plugins/bootstrap/js/bootstrap.bundle.min.js')?>"></script>
@@ -293,7 +296,7 @@
 <script src="<?= base_url('assets/dist/js/demo.js')?>"></script>
 <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
 <script src="<?= base_url('assets/dist/js/pages/dashboard3.js')?>"></script>
-<script src="<?= base_url('assets/vendor/DataTables/dataTables.min.js')?>"></script>
+<script src="<?= base_url('assets/vendor/sweetalert/sweetalert.min.js')?>"></script>
 <script src="<?= base_url('pages/'.$this->input->get('p')).'.js'?>"></script>
 </body>
 </html>
