@@ -65,7 +65,7 @@
                   <span class="float-right text-sm text-danger"><i class="fas fa-star"></i></span>
                 </h3>
                 <p class="text-sm">Miow</p>
-                <p class="text-sm text-muted"><i class="far fa-clock mr-1"></i> 4 Hours Ago</p>
+                <p class="text-sm text-muted"><i class="far fa-clock mr-1"></i> 1 Minute Ago</p>
               </div>
             </div>
             <!-- Message End -->
@@ -81,7 +81,7 @@
                   <span class="float-right text-sm text-muted"><i class="fas fa-star"></i></span>
                 </h3>
                 <p class="text-sm">Farhan Kebab</p>
-                <p class="text-sm text-muted"><i class="far fa-clock mr-1"></i> 4 Hours Ago</p>
+                <p class="text-sm text-muted"><i class="far fa-clock mr-1"></i> 12 Hours Ago</p>
               </div>
             </div>
             <!-- Message End -->
@@ -97,7 +97,7 @@
                   <span class="float-right text-sm text-warning"><i class="fas fa-star"></i></span>
                 </h3>
                 <p class="text-sm">Solat</p>
-                <p class="text-sm text-muted"><i class="far fa-clock mr-1"></i> 4 Hours Ago</p>
+                <p class="text-sm text-muted"><i class="far fa-clock mr-1"></i> 1 Years Ago</p>
               </div>
             </div>
             <!-- Message End -->
@@ -163,7 +163,7 @@
           <img src="<?= base_url('assets/dist/img/adj.jpg')?>" class="img-circle elevation-2" alt="User Image">
         </div>
         <div class="info">
-          <a href="pages/examples/blank.html" class="d-block">Alexander Supriadi</a>
+          <a href="<?= base_url('?p=profil_diri')?>" class="d-block">Alexander Supriadi</a>
         </div>
       </div>
 

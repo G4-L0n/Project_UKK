@@ -7,7 +7,7 @@ class Kelas extends CI_Controller {
         $jurusan    = $this->input->post("jurusan");
         $jumlah     = $this->input->post("jumlah");
 
-        echo json_encode(array("ressult" => "Done"));
+        echo json_encode(array("nama" => $nama, "jurusan" => $jurusan, "jumlah" => $jumlah));
     }
 }
 ?>
