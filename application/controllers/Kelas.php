@@ -41,12 +41,11 @@ class Kelas extends CI_Controller {
         $data['data']   = array();
         $data_kelas     =$this->Model_kelas->data_kelas();
         foreach($data_kelas->result() as $kelas):
-
+            
             array_push($data['data'],array(
                 $kelas->id_kelas,
                 $kelas->nama_kelas,
                 $kelas->kompentensi_keahlian,
-                "",
                 "<a class='text-danger' href='javascript:void(0);' onclick='hapus(\"$kelas->id_kelas\")'><i class='fas fa-trash'></i> Hapus</a>"
             ));
         endforeach;

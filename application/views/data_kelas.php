@@ -36,7 +36,6 @@
                                         <th>No</th>
                                         <th>Nama Kelas</th>
                                         <th>Kompentensi Keahlian</th>
-                                        <th>Jumlah Siswa</th>
                                         <th>#</th>
                                     </tr>
                                 </thead>
@@ -44,7 +43,6 @@
                                 <tbody>
                                     <tr>
                                         <td><?= $a++?></td>
-                                        <td></td>
                                         <td></td>
                                         <td></td>
                                         <td></td>
@@ -72,21 +70,15 @@
       </div>
       <div class="modal-body">
         <div class="mb-3 row">
-          <label for="nama_kelas" class="col-sm-4 col-form-label">Kelas</label>
+          <label for="nama_kelas" class="col-sm-4 col-form-label">Nama Kelas</label>
           <div class="col-sm-8">
             <input type="text" class="form-control" id="nama">
           </div>
         </div>
         <div class="mb-3 row">
-          <label for="jurusan" class="col-sm-4 col-form-label">Jurusan</label>
+          <label for="jurusan" class="col-sm-4 col-form-label">Kompentensi Keahlian</label>
           <div class="col-sm-8">
             <input type="text" class="form-control" id="jurusan">
-          </div>
-        </div>
-        <div class="mb-3 row">
-          <label for="jmlh_siswa" class="col-sm-4 col-form-label">Jumlah Siswa</label>
-          <div class="col-sm-8">
-            <input type="text" class="form-control" id="jumlah">
           </div>
         </div>
       </div>
