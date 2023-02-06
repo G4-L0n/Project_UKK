@@ -3,12 +3,12 @@
     <div class="container-fluid">
         <div class="row mb-2">
             <div class="col-sm-6">
-                <h1 class="m-0">Halal</h1>
+                <h1 class="m-0">Data Kelas</h1>
                 </div><!-- /.col -->
                     <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
-                        <li class="breadcrumb-item"><a href="#">Home</a></li>
-                        <li class="breadcrumb-item active">Dashboard</li>
+                        <li class="breadcrumb-item"><a href="./">Home</a></li>
+                        <li class="breadcrumb-item active">Data Kelas</li>
                     </ol>
                 </div><!-- /.col -->
             </div><!-- /.row -->
@@ -34,8 +34,8 @@
                                 <thead>
                                     <tr>
                                         <th>No</th>
-                                        <th>Kelas</th>
-                                        <th>Jurusan</th>
+                                        <th>Nama Kelas</th>
+                                        <th>Kompentensi Keahlian</th>
                                         <th>Jumlah Siswa</th>
                                         <th>#</th>
                                     </tr>
@@ -44,10 +44,10 @@
                                 <tbody>
                                     <tr>
                                         <td><?= $a++?></td>
-                                        <td>...</td>
-                                        <td>...</td>
-                                        <td>...</td>
-                                        <td>...</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
                                     </tr>
                                 </tbody>
                             </table>
