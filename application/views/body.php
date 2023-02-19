@@ -210,7 +210,7 @@
           </li>
           <li class="nav-item">
             <a href="<?= base_url('?p=data_siswa')?>" class="nav-link">
-              <i class="nav-icon fas fa-user-tie"></i>
+              <i class="nav-icon fas fa-user-graduate"></i>
               <p>
                 Data Siswa
               </p>
@@ -218,17 +218,17 @@
           </li>
           <li class="nav-item">
             <a href="<?= base_url('?p=data_spp')?>" class="nav-link">
-              <i class="nav-icon fas fa-user-graduate"></i>
+              <i class="nav-icon fas fa-book"></i>
               <p>
                 Data SPP
               </p>
             </a>
           </li>
           <li class="nav-item">
-            <a href="<?= base_url('?p=data_mapel')?>" class="nav-link">
-              <i class="nav-icon fas fa-book"></i>
+            <a href="<?= base_url('?p=data_petugas')?>" class="nav-link">
+              <i class="nav-icon fas fa-user-tie"></i>
               <p>
-                Data Mapel
+                Data Petugas
               </p>
             </a>
           </li>

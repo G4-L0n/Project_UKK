@@ -1,21 +1,20 @@
 $(function(){
-    $("#data_siswa").DataTable({
-      ajax: base_url+"siswa/data_siswa",
+    $("#data_petugas").DataTable({
+      ajax: base_url+"petugas/data_petugas",
       processing: true
     });
 });
 
 $("#simpan").click(function(){
-  var nisn              = $("#nisn").val();
-  var nis               = $("#nis").val();
-  var nama              = $("#nama").val();
-  var alamat            = $("#alamat").val();
-  var no_telp           = $("#nis").val();
+  var username          = $("#username").val();
+  var password          = $("#password").val();
+  var nama_petugas      = $("#nama_petugas").val();
+  var level             = $("#level").val();
 
 $.ajax({
-    url : base_url+"siswa/tambah_siswa",
+    url : base_url+"petugas/tambah_petugas",
     method : "post",
-    data : {nisn:nisn,nis:nis,nama:nama,alamat:alamat,no_telp:no_telp},
+    data : {username:username,password:password,nama_petugas:nama_petugas,level:level},
     dataType : "json",
     error : function(){
         Swal.fire({
@@ -33,15 +32,14 @@ $.ajax({
 
             $("exampleModal").modal("hide");
 
-            $("#nisn").val("");
-            $("#nis").val("");
-            $("#nama").val("");
-            $("#alamat").val("");
-            $("#no_telp").val("");
+            $("#username").val("");
+            $("#password").val("");
+            $("#nama_petugas").val("");
+            $("#level").val("");
 
-            $("#data_siswa").DataTable().destroy();
-            $("#data_siswa").DataTable({
-              ajax: base_url+"siswa/data_siswa",
+            $("#data_petugas").DataTable().destroy();
+            $("#data_petugas").DataTable({
+              ajax: base_url+"petugas/data_petugas",
               processing: true
             });
           })
@@ -50,7 +48,7 @@ $.ajax({
 })
 function hapus (id){
   $.ajax({
-    url : base_url+"siswa/hapus_siswa",
+    url : base_url+"petugas/hapus_petugas",
     method : "post",
     data : {id:id},
     dataType : "json",
@@ -70,15 +68,14 @@ function hapus (id){
 
             $("exampleModal").modal("hide");
 
-            $("#nisn").val("");
-            $("#nis").val("");
-            $("#nama").val("");
-            $("#alamat").val("");
-            $("#no_telp").val("");
+            $("#username").val("");
+            $("#password").val("");
+            $("#nama_petugas").val("");
+            $("#level").val("");
 
-            $("#data_siswa").DataTable().destroy();
-            $("#data_siswa").DataTable({
-              ajax: base_url+"siswa/data_siswa",
+            $("#data_petugas").DataTable().destroy();
+            $("#data_petugas").DataTable({
+              ajax: base_url+"petugas/data_petugas",
               processing: true
             });
           })
