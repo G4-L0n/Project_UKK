@@ -217,14 +217,6 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="<?= base_url('?p=data_spp')?>" class="nav-link">
-              <i class="nav-icon fas fa-book"></i>
-              <p>
-                Data SPP
-              </p>
-            </a>
-          </li>
-          <li class="nav-item">
             <a href="<?= base_url('?p=data_petugas')?>" class="nav-link">
               <i class="nav-icon fas fa-user-tie"></i>
               <p>
@@ -233,10 +225,18 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="<?= base_url('?p=grafik_siswa')?>" class="nav-link">
-              <i class="nav-icon fas fa-signal"></i>
+            <a href="<?= base_url('?p=data_spp')?>" class="nav-link">
+              <i class="nav-icon fas fa-book"></i>
               <p>
-                Grafik siswa
+                Data SPP
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="<?= base_url('?p=data_pembayaran')?>" class="nav-link">
+              <i class="nav-icon fas fa-book"></i>
+              <p>
+                Data Pembayaran
               </p>
             </a>
           </li>
