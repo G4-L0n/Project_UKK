@@ -90,20 +90,12 @@
           </div>
         </div>
         <div class="mb-3 row">
-          <div class="col-sm-8" align="center">
-          <label for="level"  class="col-form-label">Level Petugas</label>
-          </div>
-        </div>
-        <div class="mb-3 row">
-          <label for="level" class="col-sm-4 col-form-label">Admin</label>
+          <label for="level" class="col-sm-4 col-form-label">Level</label>
           <div class="col-sm-8">
-            <input type="checkbox" class="form-control" id="level" value="admin">
-          </div>
-        </div>
-        <div class="mb-3 row">
-          <label for="level" class="col-sm-4 col-form-label">Petugas</label>
-          <div class="col-sm-8">
-            <input type="checkbox" class="form-control" id="level" value="petugas">
+            <select id="level" class="form-control">
+              <option value="admin">Admin</option>
+          	  <option value="petugas">Petugas</option>
+            </select>
           </div>
         </div>
       </div>

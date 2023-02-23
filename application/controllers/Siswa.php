@@ -6,18 +6,48 @@ class Siswa extends CI_Controller {
         parent ::__construct();
         $this->load->model("Model_siswa");
     }
+    function select_kelas(){
+        $container["result"] = array();
+        $data = $this->Model_siswa->select_kelas($this->input->get("q"))->result();
+
+        foreach($data as $data):
+            array_push($container["result"], array(
+                "id"    => $data->kelas,
+                "text"  => $data->nama
+            ));
+        endforeach;
+        echo(json_endcode($container));
+    }
+    function select_spp(){
+        $container["result"] = array();
+        $data = $this->Model_siswa->select_spp($this->input->get("q"))->result();
+
+        foreach($data as $data):
+            array_push($container["result"], array(
+                "id"    => $data->spp,
+                "text"  => $data->nominal
+            ));
+            
+        endforeach;
+        echo(json_endcode($container));
+    }
+
     public function tambah_siswa(){
         $nisn       = $this->input->post("nisn");
         $nis        = $this->input->post("nis");
         $nama       = $this->input->post("nama");
+        $kelas      = $this->input->post("kelas");
         $alamat     = $this->input->post("alamat");
         $no_telp    = $this->input->post("no_telp");
+        $spp        = $this->input->post("spp");
 
         $data       = array("nisn"      => $nisn,
                             "nis"       => $nis,
                             "nama"      => $nama,
+                            "kelas"     => $kelas,
                             "alamat"    => $alamat,
-                            "no_telp"   => $no_telp
+                            "no_telp"   => $no_telp,
+                            "spp"       => $spp
                             );
 
         $insert     = $this->Model_siswa->insert_data($data);
@@ -52,8 +82,10 @@ class Siswa extends CI_Controller {
                 $siswa->nisn,
                 $siswa->nis,
                 $siswa->nama,
+                $siswa->id_kelas,
                 $siswa->alamat,
                 $siswa->no_telp,
+                $siswa->id_spp,
                 "<a class='text-danger' href='javascript:void(0);' onclick='hapus(\"$siswa->nisn\")'><i class='fas fa-trash'></i> Hapus</a>"
             ));
         endforeach;

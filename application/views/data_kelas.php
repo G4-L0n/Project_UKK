@@ -24,7 +24,7 @@
                             <div class="d-flex justify-content-between">
                                 <h3 class="card-title">Data kelas</h3>
                                 <!-- Button trigger modal -->
-                                <button type="button" class="btn btn-primary" data-toggle="modal" data-backdrop="static" data-target="#exampleModal">
+                                <button id="tambah_data" type="button" class="btn btn-primary" data-toggle="modal" data-backdrop="static" data-target="#exampleModal">
                                   <i class="fas fa-plus-circle"></i>&nbsp;Tambah Data
                                 </button>
                             </div>
@@ -33,16 +33,17 @@
                             <table id="data_kelas" class="table table-striped">
                                 <thead>
                                     <tr>
-                                        <th>No</th>
-                                        <th>Nama Kelas</th>
-                                        <th>Kompentensi Keahlian</th>
-                                        <th>#</th>
+                                        <th width="5%">No</th>
+                                        <th width="5%">Id</th>
+                                        <th width="60%">Nama Kelas</th>
+                                        <th width="20%">Kompentensi Keahlian</th>
+                                        <th width="10%">#</th>
                                     </tr>
                                 </thead>
-                                <?php $a = 1;?>
                                 <tbody>
                                     <tr>
-                                        <td><?= $a++?></td>
+                                        <td></td>
+                                        <td></td>
                                         <td></td>
                                         <td></td>
                                         <td></td>
@@ -70,9 +71,10 @@
       </div>
       <div class="modal-body">
         <div class="mb-3 row">
-          <label for="nama_kelas" class="col-sm-4 col-form-label">Nama Kelas</label>
+          <label for="nama" class="col-sm-4 col-form-label">Nama Kelas</label>
           <div class="col-sm-8">
             <input type="text" class="form-control" id="nama">
+            <input type ="hidden" autocomplete="off" id="id_kelas">
           </div>
         </div>
         <div class="mb-3 row">

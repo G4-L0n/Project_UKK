@@ -94,6 +94,19 @@
           </div>
         </div>
         <div class="mb-3 row">
+          <label for="kelas" class="col-sm-4 col-form-label">Kelas</label>
+          <div class="col-sm-8">
+            <input type="text" class="form-control" id="kelas" style="width:100%">
+            <option></option>
+          </div>
+        </div>
+        <div class="mb-3 row">
+          <label for="" class="col-sm-4 col-form-label"></label>
+          <div class="col-sm-8">
+            <input type="text" class="form-control" id="" style="display:none">
+          </div>
+        </div>
+        <div class="mb-3 row">
           <label for="alamat" class="col-sm-4 col-form-label">Alamat</label>
           <div class="col-sm-8">
             <input type="text" class="form-control" id="alamat">
@@ -103,6 +116,19 @@
           <label for="no_telp" class="col-sm-4 col-form-label">No. telepon</label>
           <div class="col-sm-8">
             <input type="text" class="form-control" id="no_telp">
+          </div>
+        </div>
+        <div class="mb-3 row">
+          <label for="spp" class="col-sm-4 col-form-label">Spp</label>
+          <div class="col-sm-8">
+            <input type="text" class="form-control" id="spp" style="width:100%">
+            <option></option>
+          </div>
+        </div>
+        <div class="mb-3 row">
+          <label for="" class="col-sm-4 col-form-label"></label>
+          <div class="col-sm-8">
+            <input type="text" class="form-control" id="" style="display:none">
           </div>
         </div>
       </div>

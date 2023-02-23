@@ -41,12 +41,14 @@ class Petugas extends CI_Controller {
                                     "isi" => "Data gagal di hapus"));
     }
     function data_petugas(){
+        $a = 1;
         $data['data']   = array();
         $data_petugas     =$this->Model_petugas->data_petugas();
         foreach($data_petugas->result() as $petugas):
             
             array_push($data['data'],array(
-                $petugas->id_petugas,
+                //$petugas->id_petugas,
+                $a++,
                 $petugas->username,
                 $petugas->password,
                 $petugas->nama_petugas,
