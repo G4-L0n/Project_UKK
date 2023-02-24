@@ -3,7 +3,7 @@
     <div class="container-fluid">
         <div class="row mb-2">
             <div class="col-sm-6">
-                <h1 class="m-0">Halal</h1>
+                <h1 class="m-0">Data Petugas</h1>
                 </div><!-- /.col -->
                     <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
@@ -24,7 +24,7 @@
                             <div class="d-flex justify-content-between">
                                 <h3 class="card-title">Data Petugas</h3>
                                 <!-- Button trigger modal -->
-                                <button type="button" class="btn btn-primary" data-toggle="modal" data-backdrop="static" data-target="#exampleModal">
+                                <button id="tambah_data" type="button" class="btn btn-primary" data-toggle="modal" data-backdrop="static" data-target="#exampleModal">
                                   <i class="fas fa-plus-circle"></i>&nbsp;Tambah Data
                                 </button>
                             </div>
@@ -41,17 +41,6 @@
                                         <th>#</th>
                                     </tr>
                                 </thead>
-                                <?php $a = 1;?>
-                                <tbody>
-                                    <tr>
-                                        <td><?= $a++?></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                    </tr>
-                                </tbody>
                             </table>
                         </div>
                     </div>
@@ -65,7 +54,7 @@
   <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content">
       <div class="modal-header bg-primary">
-        <h5 class="modal-title" id="exampleModalLabel"><i class="fas fa-plus-circle"></i> Tambah Data Kelas</h5>
+        <h5 class="modal-title" id="exampleModalLabel"><i class="fas fa-plus-circle"></i> Tambah Data petugas</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -74,6 +63,7 @@
         <div class="mb-3 row">
           <label for="username" class="col-sm-4 col-form-label">Username</label>
           <div class="col-sm-8">
+            <input type="hidden" autocomplete="off" id="id_petugas">
             <input type="text" class="form-control" id="username">
           </div>
         </div>

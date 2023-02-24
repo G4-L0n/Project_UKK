@@ -24,7 +24,7 @@
                             <div class="d-flex justify-content-between">
                                 <h3 class="card-title">Data Spp</h3>
                                 <!-- Button trigger modal -->
-                                <button type="button" class="btn btn-primary" data-toggle="modal" data-backdrop="static" data-target="#exampleModal">
+                                <button id="tambah_data" type="button" class="btn btn-primary" data-toggle="modal" data-backdrop="static" data-target="#exampleModal">
                                   <i class="fas fa-plus-circle"></i>&nbsp;Tambah Data
                                 </button>
                             </div>
@@ -70,6 +70,7 @@
         <div class="mb-3 row">
           <label for="tahun" class="col-sm-4 col-form-label">Tahun</label>
           <div class="col-sm-8">
+          <input type="hidden" autocomplete="off" id="id_spp">
             <input type="text" class="form-control" id="tahun">
           </div>
         </div>

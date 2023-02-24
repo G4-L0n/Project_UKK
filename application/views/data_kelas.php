@@ -36,19 +36,10 @@
                                         <th width="5%">No</th>
                                         <th width="5%">Id</th>
                                         <th width="60%">Nama Kelas</th>
-                                        <th width="20%">Kompentensi Keahlian</th>
+                                        <th width="20%">jurusan</th>
                                         <th width="10%">#</th>
                                     </tr>
                                 </thead>
-                                <tbody>
-                                    <tr>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                    </tr>
-                                </tbody>
                             </table>
                         </div>
                     </div>
@@ -73,8 +64,8 @@
         <div class="mb-3 row">
           <label for="nama" class="col-sm-4 col-form-label">Nama Kelas</label>
           <div class="col-sm-8">
-            <input type="text" class="form-control" id="nama">
             <input type ="hidden" autocomplete="off" id="id_kelas">
+            <input type="text" class="form-control" id="nama">
           </div>
         </div>
         <div class="mb-3 row">
