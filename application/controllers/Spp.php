@@ -16,25 +16,25 @@ class Spp extends CI_Controller {
             $data       = array("tahun"      => $tahun,
                                 "nominal"      => $nominal);
                             
-                $insert      =$this->Model_spp->insert_data($data);
-
-                if($insert)
-                    echo json_encode(
-                                    array(
-                                        "icon"   => "success",
-                                        "judul"  => "Berhasil",
-                                        "isi"    => "Data berhasil ditambah")
-                                    );
-                
-                else 
-                    echo json_encode(
-                                    array(
-                                        "icon"   => "error",
-                                        "judul"  => "error",
-                                        "isi"    => "Data gagal ditambah")
-                                    );
+            $insert      =$this->Model_spp->insert_data($data);
+            
+            if($insert)
+                echo json_encode(
+                    array(
+                        "icon"   => "success",
+                        "judul"  => "Berhasil",
+                        "isi"    => "Data berhasil ditambah")
+                );
+            
+            else 
+                echo json_encode(
+                    array(
+                        "icon"   => "error",
+                        "judul"  => "error",
+                        "isi"    => "Data gagal ditambah")
+                );
                                     
-        } else if($status == "update"){
+        }else if($status == "update"){
             $id_spp    =$this->input->post("id");
             $data          = array("tahun"      => $tahun,
                                    "nominal"      => $nominal);
@@ -42,23 +42,22 @@ class Spp extends CI_Controller {
             $update        =$this->Model_spp->update_data($data, $where);
 
             if($update)
-                    echo json_encode(
-                                    array(
-                                        "icon"   => "success",
-                                        "judul"  => "Berhasil",
-                                        "isi"    => "Data berhasil diubah")
-                                    );
-                
-                else 
-                    echo json_encode(
-                                    array(
-                                        "icon"   => "error",
-                                        "judul"  => "error",
-                                        "isi"    => "Data gagal diubah")
-                                    );
+                echo json_encode(
+                    array(
+                        "icon"   => "success",
+                        "judul"  => "Berhasil",
+                        "isi"    => "Data berhasil diubah")
+                );
+            
+            else 
+                echo json_encode(
+                    array(
+                        "icon"   => "error",
+                        "judul"  => "error",
+                        "isi"    => "Data gagal diubah")
+                );
         }
     }
-
 
     function hapus_spp(){
         $id      = $this->input->post('id');
@@ -66,19 +65,19 @@ class Spp extends CI_Controller {
         $delete  = $this->Model_spp->delete_data($where);
         if($delete)
             echo json_encode(
-                            array(
-                                "icon"   => "success",
-                                "judul"  => "Berhasil",
-                                "isi"    => "Data berhasil dihapus")
-                            );
+                array(
+                    "icon"   => "success",
+                    "judul"  => "Berhasil",
+                    "isi"    => "Data berhasil dihapus")
+            );
         
         else 
             echo json_encode(
-                            array(
-                                "icon"   => "error",
-                                "judul"  => "error",
-                                "isi"    => "Data gagal dihapus")
-                            );
+                array(
+                    "icon"   => "error",
+                    "judul"  => "error",
+                    "isi"    => "Data gagal dihapus")
+            );
 
     }
 
@@ -108,4 +107,5 @@ class Spp extends CI_Controller {
 
         echo json_encode($data_spp);
     }
-} 
+}
+?> 

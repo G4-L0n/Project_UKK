@@ -16,25 +16,24 @@ class Kelas extends CI_Controller {
             $data       = array("nama"      => $nama,
                                 "jurusan"   => $jurusan);
                             
-                $insert      =$this->Model_kelas->insert_data($data);
+            $insert      =$this->Model_kelas->insert_data($data);
 
-                if($insert)
-                    echo json_encode(
-                                    array(
-                                        "icon"   => "success",
-                                        "judul"  => "Berhasil",
-                                        "isi"    => "Data berhasil ditambah")
-                                    );
-                
-                else 
-                    echo json_encode(
-                                    array(
-                                        "icon"   => "error",
-                                        "judul"  => "error",
-                                        "isi"    => "Data gagal ditambah")
-                                    );
-                                    
-        } else if($status == "update"){
+            if($insert)
+                echo json_encode(
+                    array(
+                        "icon"   => "success",
+                        "judul"  => "Berhasil",
+                        "isi"    => "Data berhasil ditambah")
+                );                
+            else 
+                echo json_encode(
+                    array(
+                        "icon"   => "error",
+                        "judul"  => "error",
+                        "isi"    => "Data gagal ditambah")
+                );   
+
+        }else if($status == "update"){
             $id_kelas    =$this->input->post("id");
             $data          = array("nama"      => $nama,
                                    "jurusan"   => $jurusan);
@@ -42,23 +41,22 @@ class Kelas extends CI_Controller {
             $update        =$this->Model_kelas->update_data($data, $where);
 
             if($update)
-                    echo json_encode(
-                                    array(
-                                        "icon"   => "success",
-                                        "judul"  => "Berhasil",
-                                        "isi"    => "Data berhasil diubah")
-                                    );
+                echo json_encode(
+                    array(
+                        "icon"   => "success",
+                        "judul"  => "Berhasil",
+                        "isi"    => "Data berhasil diubah")
+                );
                 
-                else 
-                    echo json_encode(
-                                    array(
-                                        "icon"   => "error",
-                                        "judul"  => "error",
-                                        "isi"    => "Data gagal diubah")
-                                    );
+            else 
+                echo json_encode(
+                    array(
+                        "icon"   => "error",
+                        "judul"  => "error",
+                        "isi"    => "Data gagal diubah")
+                );
         }
     }
-
 
     function hapus_kelas(){
         $id      = $this->input->post('id');
@@ -66,19 +64,19 @@ class Kelas extends CI_Controller {
         $delete  = $this->Model_kelas->delete_data($where);
         if($delete)
             echo json_encode(
-                            array(
-                                "icon"   => "success",
-                                "judul"  => "Berhasil",
-                                "isi"    => "Data berhasil dihapus")
-                            );
+                array(
+                    "icon"   => "success",
+                    "judul"  => "Berhasil",
+                    "isi"    => "Data berhasil dihapus")
+            );
         
         else 
             echo json_encode(
-                            array(
-                                "icon"   => "error",
-                                "judul"  => "error",
-                                "isi"    => "Data gagal dihapus")
-                            );
+                array(
+                    "icon"   => "error",
+                    "judul"  => "error",
+                    "isi"    => "Data gagal dihapus")
+            );
 
     }
 
@@ -110,3 +108,4 @@ class Kelas extends CI_Controller {
         echo json_encode($data_kelas);
     }
 } 
+?>

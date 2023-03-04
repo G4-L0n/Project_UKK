@@ -1,5 +1,4 @@
 <?php
-
 class Model_petugas extends CI_Model {
     
     function data_petugas($id = ""){
@@ -28,3 +27,4 @@ class Model_petugas extends CI_Model {
      return $this->db->update("petugas");
     }
 }
+?>

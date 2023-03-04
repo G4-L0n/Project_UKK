@@ -24,21 +24,21 @@ class Petugas extends CI_Controller {
 
                 if($insert)
                     echo json_encode(
-                                    array(
-                                        "icon"   => "success",
-                                        "judul"  => "Berhasil",
-                                        "isi"    => "Data berhasil ditambah")
-                                    );
+                        array(
+                            "icon"   => "success",
+                            "judul"  => "Berhasil",
+                            "isi"    => "Data berhasil ditambah")
+                    );
                 
                 else 
                     echo json_encode(
-                                    array(
-                                        "icon"   => "error",
-                                        "judul"  => "error",
-                                        "isi"    => "Data gagal ditambah")
-                                    );
+                        array(
+                            "icon"   => "error",
+                            "judul"  => "error",
+                            "isi"    => "Data gagal ditambah")
+                    );
                                     
-        } else if($status == "update"){
+        }else if($status == "update"){
             $id_petugas    =$this->input->post("id");
             $data          = array("username"      => $username,
                                    "password"      => $password,
@@ -49,19 +49,19 @@ class Petugas extends CI_Controller {
 
             if($update)
                     echo json_encode(
-                                    array(
-                                        "icon"   => "success",
-                                        "judul"  => "Berhasil",
-                                        "isi"    => "Data berhasil diubah")
-                                    );
+                        array(
+                            "icon"   => "success",
+                            "judul"  => "Berhasil",
+                            "isi"    => "Data berhasil diubah")
+                    );
                 
                 else 
                     echo json_encode(
-                                    array(
-                                        "icon"   => "error",
-                                        "judul"  => "error",
-                                        "isi"    => "Data gagal diubah")
-                                    );
+                        array(
+                            "icon"   => "error",
+                            "judul"  => "error",
+                            "isi"    => "Data gagal diubah")
+                    );
         }
     }
 
@@ -72,19 +72,19 @@ class Petugas extends CI_Controller {
         $delete  = $this->Model_petugas->delete_data($where);
         if($delete)
             echo json_encode(
-                            array(
-                                "icon"   => "success",
-                                "judul"  => "Berhasil",
-                                "isi"    => "Data berhasil dihapus")
-                            );
+                array(
+                    "icon"   => "success",
+                    "judul"  => "Berhasil",
+                    "isi"    => "Data berhasil dihapus")
+            );
         
         else 
             echo json_encode(
-                            array(
-                                "icon"   => "error",
-                                "judul"  => "error",
-                                "isi"    => "Data gagal dihapus")
-                            );
+                array(
+                    "icon"   => "error",
+                    "judul"  => "error",
+                    "isi"    => "Data gagal dihapus")
+            );
 
     }
 
@@ -111,12 +111,10 @@ class Petugas extends CI_Controller {
     }
     
     public function detail_petugas(){
-        $id           = $this->input->post('id');
+        $id             = $this->input->post('id');
         $data_petugas   = $this->Model_petugas->data_petugas($id)->row();
 
         echo json_encode($data_petugas);
     }
 } 
-
-
-
+?>
