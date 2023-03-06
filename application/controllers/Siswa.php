@@ -10,6 +10,7 @@ class Siswa extends CI_Controller {
     function select_kelas(){
         $container["results"] = array();
         $data = $this->Model_siswa->select_kelas($this->input->get("q"))->result();
+
         foreach($data as $data):
               array_push($container["results"], array(
                   "id"   => $data->id_kelas,
@@ -23,10 +24,12 @@ class Siswa extends CI_Controller {
     function select_spp(){
         $container["results"] = array();
         $data = $this->Model_siswa->select_spp($this->input->get("q"))->result();
-        foreach($data as $data):    
+
+        foreach($data as $data):
               array_push($container["results"], array(
                   "id"   => $data->id_spp,
                   "text" => $data->nominal
+
               ));
         endforeach;
 
@@ -43,14 +46,14 @@ class Siswa extends CI_Controller {
         $id_spp       =$this->input->post("id_spp");
         $status       =$this->input->post("status");
 
-    if($status == "insert"){
-        $data        = array("nisn"             => $nisn,
-                             "nis"              => $nis,
-                             "nama_siswa"       => $nama_siswa,
-                             "id_kelas"         => $id_kelas,
-                             "alamat"           => $alamat,
-                             "no_telp"          => $no_telp,
-                             "id_spp"           => $id_spp);
+        if($status == "insert"){
+            $data        = array("nisn"             => $nisn,
+                                 "nis"              => $nis,
+                                 "nama_siswa"       => $nama_siswa,
+                                 "id_kelas"         => $id_kelas,
+                                 "alamat"           => $alamat,
+                                 "no_telp"          => $no_telp,
+                                 "id_spp"           => $id_spp);
 
                       
         $insert      =$this->Model_siswa->insert_data($data);
@@ -60,7 +63,7 @@ class Siswa extends CI_Controller {
                             array(
                                 "icon"   => "success",
                                 "judul"  => "Berhasil",
-                                "isi"    => "Data berhasil ditambah")
+                                "isi"    => "Data berhasil ditambahkan")
                             );
         
         else 
@@ -68,28 +71,30 @@ class Siswa extends CI_Controller {
                             array(
                                 "icon"   => "error",
                                 "judul"  => "error",
-                                "isi"    => "Data gagal ditambah")
+                                "isi"    => "Data gagal ditambahkan")
                             );
-    }else if($status == "update"){
-        $nisn    =$this->input->post("id");
-        $data        = array("nisn"             => $nisn,
-                             "nis"              => $nis, 
-                             "nama_siswa"       => $nama_siswa,
-                             "id_kelas"         => $id_kelas,
-                             "alamat"           => $alamat,
-                             "no_telp"          => $no_telp,
-                             "id_spp"           => $id_spp);
-        $where       = array("nisn"             => $nisn);
-        $update      =$this->Model_siswa->update_data($data, $where);
+        } else if ($status == "update"){
+            $nisn             = $this->input->post('nisn');
+            $data             = array("id_kelas"         => $id_kelas,
+                                      "nisn"             => $nisn,
+                                      "nis"              => $nis,
+                                      "nama_siswa"       => $nama_siswa,
+                                      "id_kelas"         => $id_kelas,
+                                      "alamat"           => $alamat,
+                                      "no_telp"          => $no_telp,
+                                      "id_spp"           => $id_spp);
+             $where           = array("nisn"             => $nisn);
+             
+             $update          =$this->Model_siswa->update_data($data, $where);
 
-        if($update)
+             if($update)
                 echo json_encode(
-                                array(
-                                    "icon"   => "success",
-                                    "judul"  => "Berhasil",
-                                    "isi"    => "Data berhasil diubah")
-                                );
-            
+                            array(
+                                "icon"   => "success",
+                                "judul"  => "Berhasil",
+                                "isi"    => "Data berhasil diubah")
+                            );
+        
             else 
                 echo json_encode(
                                 array(
@@ -97,10 +102,10 @@ class Siswa extends CI_Controller {
                                     "judul"  => "error",
                                     "isi"    => "Data gagal diubah")
                                 );
+            }
+
+        
     }
-
-
-}
 
     function hapus_siswa(){
         $id      = $this->input->post('id');
@@ -125,10 +130,12 @@ class Siswa extends CI_Controller {
     }
 
     function data_siswa(){
+        $a = 1;
         $data['data'] = array();
         $data_siswa  = $this->Model_siswa->data_siswa();
         foreach($data_siswa->result() as $siswa):
             array_push($data['data'], array(
+                $a++,
                 $siswa->nisn, 
                 $siswa->nis,
                 $siswa->nama_siswa,
@@ -137,20 +144,22 @@ class Siswa extends CI_Controller {
                 $siswa->no_telp,
                 $siswa->nominal,
                 "
-                <a class='text-danger' href='javascript:void(0);' onclick='hapus(\"$siswa->nisn\")'><i class='fas fa-trash'></i>Hapus</a>
+                <a class='text-danger' href='javascript:void(0)' onclick='hapus(\"$siswa->nisn\")'><i class='fas fa-trash'></i>Hapus</a>
                 <br>
                 <a class='text-primary' href='javascript:void(0);' onclick='ubah(\"$siswa->nisn\")'><i class='fas fa-edit'></i>Ubah</a>
                 "
             ));
+        
         endforeach;
-
+        
         echo json_encode($data);
-    } 
+    }
     function detail_siswa(){
-        $id          =   $this->input->post('nisn');
-        $data_siswa  =   $this->Model_siswa->data_siswa($id)->row();
+        $id           = $this->input->post('nisn');
+        $data_siswa     = $this->Model_siswa->data_siswa($id)->row();
 
         echo json_encode($data_siswa);
     }
+   
 }
 ?>

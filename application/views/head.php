@@ -14,4 +14,5 @@
   <!-- Theme style -->
   <link rel="stylesheet" href="<?= base_url('assets/dist/css/adminlte.min.css')?>">
   <link rel="stylesheet" href="<?= base_url('assets/vendor/DataTables/dataTables.min.css')?>">
+  <link rel="stylesheet" href="<?= base_url('assets/vendor/select2/dist/css/select2.min.css')?>">
 </head>

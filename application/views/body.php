@@ -297,6 +297,7 @@
 <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
 <script src="<?= base_url('assets/dist/js/pages/dashboard3.js')?>"></script>
 <script src="<?= base_url('assets/vendor/DataTables/dataTables.min.js')?>"></script>
+<script src="<?= base_url('assets/vendor/select2/dist/js/select2.full.min.js')?>"></script>
 <script src="<?= base_url('assets/vendor/sweetalert/sweetalert.min.js')?>"></script>
 <script src="<?= base_url('pages/'.$this->input->get('p')).'.js'?>"></script>
 </body>

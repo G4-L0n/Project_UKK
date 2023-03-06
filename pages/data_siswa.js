@@ -5,7 +5,7 @@ $(function(){
     });   
 });
 
-$("#kelas").select({
+$("#kelas").select2({
     theme: "classic",
     allowClear: true,
     placeholder: "Pilih Kelas",
@@ -20,7 +20,7 @@ $("#kelas").select({
 
 });
 
-$("#spp").select({
+$("#spp").select2({
     theme: "classic",
     allowClear: true,
     placeholder: "Pilih Nominal",
@@ -36,7 +36,8 @@ $("#spp").select({
 });
 
 $("#tambah_data").click(function(){
-    $("#id_siswa").val("0");
+
+    $("#id_siswa").val(0);
     $("#nisn").val("");
     $("#nis").val("");
     $("#nama_siswa").val("");
@@ -55,15 +56,13 @@ $("#simpan").click(function(){
     var alamat     = $("#alamat").val();
     var no_telp    = $("#no_telp").val();
     var spp        = $("#spp").val();
-    var data;
-
-    if(id_siswa.length > 0)
-        data  = {status:"update", id_siswa:id_siswa, nisn:nisn,nis:nis,nama_siswa:nama_siswa,id_kelas:kelas,alamat:alamat,no_telp:no_telp,id_spp:spp};
+    
+    if (id_siswa > 0)
+        data = {status:"update", id_siswa:id_siswa,nisn:nisn, nis:nis,nama_siswa:nama_siswa,id_kelas:kelas,alamat:alamat,no_telp:no_telp,id_spp:spp}
     else
-        data  = {status:"insert", id_siswa:id_siswa, nisn:nisn,nis:nis,nama_siswa:nama_siswa,id_kelas:kelas,alamat:alamat,no_telp:no_telp,id_spp:spp};
-
-
-    $.ajax({
+        data = {status:"insert", id_siswa:id_siswa,nisn:nisn, nis:nis,nama_siswa:nama_siswa,id_kelas:kelas,alamat:alamat,no_telp:no_telp,id_spp:spp}
+    
+        $.ajax({
         url : base_url+"siswa/tambah_siswa",
         method: "post",
         data: data,

@@ -25,7 +25,7 @@
                         <div class="d-flex justify-content-between">
                         <h3 class="card-title">Data Kelas</h3>
                          <!-- Button trigger modal -->
-                         <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                         <button id="tambah_data" type="button" class="btn btn-primary" data-toggle="modal" data-backdrop="static" data-target="#exampleModal">
                          <i class="fas fa-plus-circle"></i>&nbsp;Tambah Data
                         </button>
                         </div>
@@ -34,6 +34,7 @@
                             <table id="data_siswa" class="table table-striped">
                                 <thead>
                                     <tr>
+                                        <th>No</th>
                                         <th>NISN</th>
                                         <th>NIS</th>
                                         <th>Nama Lengkap</th>
@@ -113,7 +114,7 @@
             </div>
 
             <div class="mb-3 row">
-            <label for="spp" class="col-sm-4 col-form-label">spp</label>
+            <label for="spp" class="col-sm-4 col-form-label">Spp</label>
             <div class="col-sm-8">
               <select class="form-control" id="spp" style="width:100%">
               <option></option>
