@@ -27,7 +27,7 @@ class Model_siswa extends CI_Model {
     //select 2 keelas
     function select_kelas($q = ""){
       if($q != "")
-          $this->db->where("nama LIKE '%$q%'");
+          $this->db->where("nama_kelas LIKE '%$q%'");
 
       return $this->db->get("kelas");
   }
@@ -44,6 +44,9 @@ class Model_siswa extends CI_Model {
              $this->db->set($data);
              $this->db->where($where);
       return $this->db->update("siswa");
+    }
+    function count(){
+      return $this->db->count_all("siswa");
     }
 }
 ?>

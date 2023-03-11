@@ -5,29 +5,34 @@ $(function(){
   });
 });
 
-$("#tambah_data").click(function(){
-  $("#nama").val("");
+$("#print_data").click(function(){
+  $("#nama_kelas").val("");
   $("#jurusan").val("");
-  $("#level").val("");
+  $("#id_kelas").val("");
+})
+
+$("#tambah_data").click(function(){
+  $("#nama_kelas").val("");
+  $("#jurusan").val("");
   $("#id_kelas").val("");
 })
 
 $("#simpan").click(function(){
   var id_kelas     = $("#id_kelas").val();
-  var nama         = $("#nama").val();
+  var nama_kelas   = $("#nama_kelas").val();
   var jurusan      = $("#jurusan").val();
   var data;
 
   if(id_kelas.length > 0)
-      data = {status:"update", id:id_kelas,nama:nama,jurusan:jurusan};
+      data = {status:"update", id:id_kelas,nama_kelas:nama_kelas,jurusan:jurusan};
   else
-      data = {status:"insert", nama:nama,jurusan:jurusan};
+      data = {status:"insert", nama_kelas:nama_kelas,jurusan:jurusan};
 
   $.ajax({
       url : base_url+"kelas/tambah_kelas",
       method: "post",
       data: data,
-      dataType: "json", //javascript object notation
+      dataType: "json",
       error: function(){
           Swal.fire({
               icon: 'error',
@@ -44,7 +49,7 @@ $("#simpan").click(function(){
               //tutup Modal
              $("#exampleModal").modal("hide");
              //membersihkan isian 
-             $("#nama").val("");
+             $("#nama_kelas").val("");
              $("#jurusan").val("");
              //deklarasi ulang tabel
              $("#data_kelas").DataTable().destroy();
@@ -62,7 +67,7 @@ function hapus(id){
       url : base_url+"kelas/hapus_kelas",
       method: "post",
       data: {id:id},
-      dataType: "json", //javascript object notation
+      dataType: "json",
       error: function(){
           Swal.fire({
               icon: 'error',
@@ -102,7 +107,7 @@ function ubah(id){
       },
       success: function(res){
          $("#exampleModal").modal("show");
-         $("#nama").val(res.nama);
+         $("#nama_kelas").val(res.nama_kelas);
          $("#id_kelas").val(res.id_kelas);
          $("#jurusan").val(res.jurusan);
       }

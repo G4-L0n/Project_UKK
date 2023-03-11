@@ -6,15 +6,15 @@ class Kelas extends CI_Controller {
         parent::__construct();
         $this->load->model("Model_kelas");
     }
-
+    
     public function tambah_kelas(){
-        $nama            = $this->input->post("nama");
+        $nama_kelas      = $this->input->post("nama_kelas");
         $jurusan         = $this->input->post("jurusan");
         $status          = $this->input->post("status");
 
         if($status == "insert"){
-            $data       = array("nama"      => $nama,
-                                "jurusan"   => $jurusan);
+            $data       = array("nama_kelas"      => $nama_kelas,
+                                "jurusan"         => $jurusan);
                             
             $insert      =$this->Model_kelas->insert_data($data);
 
@@ -35,9 +35,9 @@ class Kelas extends CI_Controller {
 
         }else if($status == "update"){
             $id_kelas    =$this->input->post("id");
-            $data          = array("nama"      => $nama,
-                                   "jurusan"   => $jurusan);
-            $where         = array("id_kelas"  => $id_kelas);
+            $data          = array("nama_kelas"     => $nama_kelas,
+                                   "jurusan"        => $jurusan);
+            $where         = array("id_kelas"       => $id_kelas);
             $update        =$this->Model_kelas->update_data($data, $where);
 
             if($update)
@@ -88,7 +88,7 @@ class Kelas extends CI_Controller {
             array_push($data['data'], array(
                 $a++,
                 $kelas->id_kelas,
-                $kelas->nama,
+                $kelas->nama_kelas,
                 $kelas->jurusan,
                 "
                 <a class='text-danger' href='javascript:void(0);' onclick='hapus(\"$kelas->id_kelas\")'><i class='fas fa-trash'></i>Hapus</a>

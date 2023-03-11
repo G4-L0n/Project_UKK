@@ -40,7 +40,7 @@ $("#tambah_data").click(function(){
     $("#id_siswa").val(0);
     $("#nisn").val("");
     $("#nis").val("");
-    $("#nama_siswa").val("");
+    $("#nama").val("");
     $("#kelas").val("");
     $("#alamat").val("");
     $("#no_telp").val("");
@@ -51,16 +51,16 @@ $("#simpan").click(function(){
     var id_siswa   = $("#id_siswa").val();
     var nisn       = $("#nisn").val();
     var nis        = $("#nis").val();
-    var nama_siswa = $("#nama_siswa").val();
+    var nama       = $("#nama").val();
     var kelas      = $("#kelas").val();
     var alamat     = $("#alamat").val();
     var no_telp    = $("#no_telp").val();
     var spp        = $("#spp").val();
     
     if (id_siswa > 0)
-        data = {status:"update", id_siswa:id_siswa,nisn:nisn, nis:nis,nama_siswa:nama_siswa,id_kelas:kelas,alamat:alamat,no_telp:no_telp,id_spp:spp}
+        data = {status:"update", id_siswa:id_siswa,nisn:nisn, nis:nis,nama:nama,id_kelas:kelas,alamat:alamat,no_telp:no_telp,id_spp:spp}
     else
-        data = {status:"insert", id_siswa:id_siswa,nisn:nisn, nis:nis,nama_siswa:nama_siswa,id_kelas:kelas,alamat:alamat,no_telp:no_telp,id_spp:spp}
+        data = {status:"insert", id_siswa:id_siswa,nisn:nisn, nis:nis,nama:nama,id_kelas:kelas,alamat:alamat,no_telp:no_telp,id_spp:spp}
     
         $.ajax({
         url : base_url+"siswa/tambah_siswa",
@@ -85,7 +85,7 @@ $("#simpan").click(function(){
                //membersihkan isian 
                $("#nisn").val("");
                $("#nis").val("");
-               $("#nama_siswa").val("");
+               $("#nama").val("");
                $("#alamat").val("");
                $("#no_telp").val("");
                $("#kelas").val(null).trigger("change");
@@ -149,7 +149,7 @@ function ubah(nisn){
            $("#id_siswa").val(1);
            $("#nisn").val(res.nisn);
            $("#nis").val(res.nis);
-           $("#nama_siswa").val(res.nama_siswa);
+           $("#nama").val(res.nama);
            $("#alamat").val(res.alamat);
            $("#no_telp").val(res.no_telp);
            $("#kelas").val(res.id_kelas);

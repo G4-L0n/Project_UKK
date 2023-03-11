@@ -17,36 +17,17 @@
         <a class="nav-link" data-widget="pushmenu" href="pages/examples/blank.html" role="button"><i class="fas fa-bars"></i></a>
       </li>
       <li class="nav-item d-none d-sm-inline-block">
-        <a href="index.html" class="nav-link">Home</a>
-      </li>
-      <li class="nav-item d-none d-sm-inline-block">
-        <a href="pages/examples/blank.html" class="nav-link">Contact</a>
+          <?php if(htmlentities($current_user->nama_petugas)){?>
+            <a href=<?= site_url('auth/logout') ?> class="nav-link">Logout</a>
+          <?php }else if(htmlentities($current_user->nama)){?>
+            <a href=<?= site_url('auth/logouts') ?> class="nav-link">Logouts</a>
+          <?php }?>
       </li>
     </ul>
 
     <!-- Right navbar links -->
     <ul class="navbar-nav ml-auto">
-      <!-- Navbar Search -->
-      <li class="nav-item">
-        <a class="nav-link" data-widget="navbar-search" href="pages/examples/blank.html" role="button">
-          <i class="fas fa-search"></i>
-        </a>
-        <div class="navbar-search-block">
-          <form class="form-inline">
-            <div class="input-group input-group-sm">
-              <input class="form-control form-control-navbar" type="search" placeholder="Search" aria-label="Search">
-              <div class="input-group-append">
-                <button class="btn btn-navbar" type="submit">
-                  <i class="fas fa-search"></i>
-                </button>
-                <button class="btn btn-navbar" type="button" data-widget="navbar-search">
-                  <i class="fas fa-times"></i>
-                </button>
-              </div>
-            </div>
-          </form>
-        </div>
-      </li>
+      
 
       <!-- Messages Dropdown Menu -->
       <li class="nav-item dropdown">
@@ -160,24 +141,24 @@
       <!-- Sidebar user panel (optional) -->
       <div class="user-panel mt-3 pb-3 mb-3 d-flex">
         <div class="image">
-          <img src="<?= base_url('assets/dist/img/adj.jpg')?>" class="img-circle elevation-2" alt="User Image">
+          <a href=<?= base_url('?p=profil_diri')?>><img src="<?= base_url('assets/dist/img/adj.jpg')?>" class="img-circle elevation-2" alt="User Image"></a>
         </div>
         <div class="info">
-          <a href="<?= base_url('?p=profil_diri')?>" class="d-block">Alexander Supriadi</a>
+          <?php if(htmlentities($current_user->nama_petugas)){?>
+          <a href=<?= base_url('?p=profil_diri')?>>
+            <b class="d-block text-light"><?= htmlentities($current_user->nama_petugas) ?></b>
+				    <small class="d-block text-light"><?= htmlentities($current_user->username) ?></small>
+          </a>
+          <?php }else if(htmlentities($current_user->nama)){?>
+          <a href=<?= base_url('?p=profil_diri')?>>
+            <b class="d-block text-light"><?= htmlentities($current_user->nama) ?></b>
+				    <small class="d-block text-light"><?= htmlentities($current_user->nisn) ?></small>
+          </a>
+          <?php }?>
         </div>
       </div>
 
-      <!-- SidebarSearch Form -->
-      <div class="form-inline">
-        <div class="input-group" data-widget="sidebar-search">
-          <input class="form-control form-control-sidebar" type="search" placeholder="Search" aria-label="Search">
-          <div class="input-group-append">
-            <button class="btn btn-sidebar">
-              <i class="fas fa-search fa-fw"></i>
-            </button>
-          </div>
-        </div>
-      </div>
+      
 
       <!-- Sidebar Menu -->
       <nav class="mt-2">
@@ -191,7 +172,7 @@
                 Dashboard
               </p>
             </a>
-          </li>
+          <!--</li>
           <li class="nav-item">
             <a href="<?= base_url('?p=profil_diri')?>" class="nav-link">
               <i class="nav-icon fas fa-user"></i>
@@ -199,7 +180,7 @@
                 Profil diri
               </p>
             </a>
-          </li>
+          </li>-->
           <li class="nav-item">
             <a href="<?= base_url('?p=data_kelas')?>" class="nav-link">
               <i class="nav-icon fas fa-users"></i>
@@ -234,7 +215,7 @@
           </li>
           <li class="nav-item">
             <a href="<?= base_url('?p=data_pembayaran')?>" class="nav-link">
-              <i class="nav-icon fas fa-book"></i>
+              <i class="nav-icon fas fa-address-book"></i>
               <p>
                 Data Pembayaran
               </p>

@@ -28,7 +28,7 @@ class Pembayaran extends CI_Controller {
         foreach($data as $data):
               array_push($container["results"], array(
                   "id"   => $data->nisn,
-                  "text" => $data->nama_siswa
+                  "text" => $data->nama
 
               ));
         endforeach;
@@ -155,7 +155,7 @@ class Pembayaran extends CI_Controller {
                 $a++,
                 $pembayaran->id_pembayaran,
                 $pembayaran->nama_petugas,
-                $pembayaran->nama_siswa,
+                $pembayaran->nama,
                 $pembayaran->tgl_bayar,
                 $pembayaran->bulan_dibayar,
                 $pembayaran->tahun_dibayar,

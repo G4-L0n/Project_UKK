@@ -103,14 +103,36 @@
            <div class="mb-3 row">
             <label for="bulan_dibayar" class="col-sm-4 col-form-label">Bulan Dibayar</label>
             <div class="col-sm-8">
-              <input type="text" class="form-control" id="bulan_dibayar">
+              <select id="bulan_dibayar" class="form-control">
+                <option value="Januari">Januari</option>
+          	    <option value="Febuari">Febuari</option>
+                <option value="Maret">Maret</option>
+          	    <option value="April">April</option>
+                <option value="Mei">Mei</option>
+          	    <option value="Juni">Juni</option>
+                <option value="Juli">Juli</option>
+          	    <option value="Agustus">Agustus</option>
+                <option value="September">September</option>
+          	    <option value="Oktober">Oktober</option>
+                <option value="November">November</option>
+          	    <option value="Desember">Desember</option>
+              </select>
             </div>
             </div>
 
            <div class="mb-3 row">
             <label for="tahun_dibayar" class="col-sm-4 col-form-label">Tahun Dibayar</label>
             <div class="col-sm-8">
-              <input type="text" class="form-control" id="tahun_dibayar">
+            <select id="tahun_dibayar" class="form-control">
+                <option value="2018">2018</option>
+          	    <option value="2019">2019</option>
+                <option value="2020">2020</option>
+          	    <option value="2021">2021</option>
+                <option value="2022">2022</option>
+          	    <option value="2023">2023</option>
+                <option value="2024">2024</option>
+          	    <option value="2025">2025</option>
+              </select>
             </div>
             </div>
 

@@ -14,7 +14,7 @@ class Siswa extends CI_Controller {
         foreach($data as $data):
               array_push($container["results"], array(
                   "id"   => $data->id_kelas,
-                  "text" => $data->nama
+                  "text" => $data->nama_kelas
 
               ));
         endforeach;
@@ -40,7 +40,7 @@ class Siswa extends CI_Controller {
         $id_kelas     =$this->input->post("id_kelas");
         $nisn         =$this->input->post("nisn");
         $nis          =$this->input->post("nis");
-        $nama_siswa   =$this->input->post("nama_siswa");
+        $nama         =$this->input->post("nama");
         $alamat       =$this->input->post("alamat");
         $no_telp      =$this->input->post("no_telp");
         $id_spp       =$this->input->post("id_spp");
@@ -49,7 +49,7 @@ class Siswa extends CI_Controller {
         if($status == "insert"){
             $data        = array("nisn"             => $nisn,
                                  "nis"              => $nis,
-                                 "nama_siswa"       => $nama_siswa,
+                                 "nama"             => $nama,
                                  "id_kelas"         => $id_kelas,
                                  "alamat"           => $alamat,
                                  "no_telp"          => $no_telp,
@@ -78,8 +78,7 @@ class Siswa extends CI_Controller {
             $data             = array("id_kelas"         => $id_kelas,
                                       "nisn"             => $nisn,
                                       "nis"              => $nis,
-                                      "nama_siswa"       => $nama_siswa,
-                                      "id_kelas"         => $id_kelas,
+                                      "nama"             => $nama,
                                       "alamat"           => $alamat,
                                       "no_telp"          => $no_telp,
                                       "id_spp"           => $id_spp);
@@ -138,8 +137,8 @@ class Siswa extends CI_Controller {
                 $a++,
                 $siswa->nisn, 
                 $siswa->nis,
-                $siswa->nama_siswa,
                 $siswa->nama,
+                $siswa->nama_kelas,
                 $siswa->alamat,
                 $siswa->no_telp,
                 $siswa->nominal,

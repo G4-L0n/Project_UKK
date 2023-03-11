@@ -35,7 +35,7 @@ class Model_pembayaran extends CI_Model {
 
     function select_siswa($q = ""){
       if($q != "")
-          $this->db->where("nama_siswa LIKE '%$q%'");
+          $this->db->where("nama LIKE '%$q%'");
 
       return $this->db->get("siswa");
   }
@@ -52,6 +52,9 @@ class Model_pembayaran extends CI_Model {
              $this->db->set($data);
              $this->db->where($where);
       return $this->db->update("pembayaran");
+    }
+    public function count(){
+      return $this->db->count_all("pembayaran");
     }
 }
 ?>

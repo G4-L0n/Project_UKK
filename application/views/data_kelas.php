@@ -58,13 +58,14 @@
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
+      
       <div class="modal-body">
 
         <div class="mb-3 row">
-          <label for="nama" class="col-sm-4 col-form-label">Nama Kelas</label>
+          <label for="nama_kelas" class="col-sm-4 col-form-label">Nama Kelas</label>
           <div class="col-sm-8">
             <input type ="hidden" autocomplete="off" id="id_kelas">
-            <input type="text" class="form-control" id="nama">
+            <input type="text" class="form-control" id="nama_kelas">
           </div>
         </div>
 

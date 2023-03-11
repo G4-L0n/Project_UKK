@@ -79,9 +79,9 @@
            </div>
 
            <div class="mb-3 row">
-            <label for="nama_siswa" class="col-sm-4 col-form-label">Nama Siswa</label>
+            <label for="nama" class="col-sm-4 col-form-label">Nama Siswa</label>
             <div class="col-sm-8">
-              <input type="text" class="form-control" id="nama_siswa">
+              <input type="text" class="form-control" id="nama">
             </div>
             </div>
 

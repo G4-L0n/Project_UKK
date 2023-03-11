@@ -26,5 +26,8 @@ class Model_spp extends CI_Model {
             $this->db->where($where);
      return $this->db->update("spp");
     }
+    function count(){
+      return $this->db->count_all("spp");
+    }
 }
 ?>
