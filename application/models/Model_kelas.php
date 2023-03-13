@@ -26,5 +26,12 @@ class Model_kelas extends CI_Model {
             $this->db->where($where);
      return $this->db->update("kelas");
     }
+
+    public function count(){
+      return $this->db->count_all("kelas");
+    }
+    function cetak(){
+      return $this->db->get("kelas");
+    }
 }
 ?>

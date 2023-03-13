@@ -178,6 +178,10 @@ class Pembayaran extends CI_Controller {
 
         echo json_encode($data_pembayaran);
     }
+    public function cetak(){
+        $data['pembayaran']= $this->Model_pembayaran->cetak("pembayaran")->result();
+        $this->load->view('print/print_pembayaran',$data);
+    }
    
 }
 ?>

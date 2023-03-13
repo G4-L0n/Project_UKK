@@ -45,8 +45,15 @@ class Model_siswa extends CI_Model {
              $this->db->where($where);
       return $this->db->update("siswa");
     }
-    function count(){
+
+    Public function count(){
       return $this->db->count_all("siswa");
+    }
+
+    function cetak(){
+      $this->db->join("kelas", "kelas.id_kelas = siswa.id_kelas", "inner");
+      $this->db->join("spp", "spp.id_spp = siswa.id_spp", "inner");
+      return $this->db->get("siswa");
     }
 }
 ?>

@@ -53,8 +53,12 @@ class Model_pembayaran extends CI_Model {
              $this->db->where($where);
       return $this->db->update("pembayaran");
     }
-    public function count(){
-      return $this->db->count_all("pembayaran");
+  //print
+    function cetak(){
+      $this->db->join("petugas", "petugas.id_petugas = pembayaran.id_petugas", "inner");
+      $this->db->join("siswa", "siswa.nisn = pembayaran.nisn", "inner");
+      $this->db->join("spp", "spp.id_spp = pembayaran.id_spp", "inner");
+      return $this->db->get("pembayaran");
     }
 }
 ?>

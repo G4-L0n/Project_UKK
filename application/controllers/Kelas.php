@@ -107,5 +107,9 @@ class Kelas extends CI_Controller {
 
         echo json_encode($data_kelas);
     }
+    public function cetak(){
+        $data['kelas']= $this->Model_kelas->cetak("kelas")->result();
+        $this->load->view('print/print_kelas',$data);
+    }
 } 
 ?>

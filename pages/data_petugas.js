@@ -109,7 +109,7 @@ function ubah(id){
          $("#exampleModal").modal("show");
          $("#username").val(res.username);
          $("#id_petugas").val(res.id_petugas);
-         $("#password").val(res.password);
+         $("#password").val("");
          $("#nama_petugas").val(res.nama_petugas);
          $("#level").val(res.level);
       }

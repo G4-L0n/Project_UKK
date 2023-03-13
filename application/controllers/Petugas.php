@@ -13,10 +13,10 @@ class Petugas extends CI_Controller {
         $nama_petugas       = $this->input->post("nama_petugas");
         $level              = $this->input->post("level");
         $status             = $this->input->post("status");
-
+        $p                  = password_hash($password, PASSWORD_DEFAULT);
         if($status == "insert"){
             $data       = array("username"      => $username,
-                                "password"      => $password,
+                                "password"      => $p,
                                 "nama_petugas"  => $nama_petugas,
                                 "level"         => $level);
                             
@@ -41,7 +41,7 @@ class Petugas extends CI_Controller {
         }else if($status == "update"){
             $id_petugas    =$this->input->post("id");
             $data          = array("username"      => $username,
-                                   "password"      => $password,
+                                   "password"      => $p,
                                    "nama_petugas"  => $nama_petugas,
                                    "level"         => $level);
             $where         = array("id_petugas"   => $id_petugas);
@@ -96,7 +96,6 @@ class Petugas extends CI_Controller {
             array_push($data['data'], array(
                 $a++,
                 $petugas->username,
-                $petugas->password,
                 $petugas->nama_petugas,
                 $petugas->level,
                 "
@@ -115,6 +114,10 @@ class Petugas extends CI_Controller {
         $data_petugas   = $this->Model_petugas->data_petugas($id)->row();
 
         echo json_encode($data_petugas);
+    }
+    public function cetak(){
+        $data['petugas']= $this->Model_petugas->cetak("petugas")->result();
+        $this->load->view('print/print_petugas',$data);
     }
 } 
 ?>

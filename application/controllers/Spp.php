@@ -107,5 +107,9 @@ class Spp extends CI_Controller {
 
         echo json_encode($data_spp);
     }
+    public function cetak(){
+        $data['spp']= $this->Model_spp->cetak("spp")->result();
+        $this->load->view('print/print_spp',$data);
+    }
 }
 ?> 

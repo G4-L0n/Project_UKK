@@ -159,6 +159,10 @@ class Siswa extends CI_Controller {
 
         echo json_encode($data_siswa);
     }
+    public function cetak(){
+        $data['siswa']= $this->Model_siswa->cetak("siswa")->result();
+        $this->load->view('print/print_siswa',$data);
+    }
    
 }
 ?>
