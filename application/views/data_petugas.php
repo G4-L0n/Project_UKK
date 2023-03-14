@@ -7,7 +7,7 @@
       </div><!-- /.col -->
       <div class="col-sm-6">
         <ol class="breadcrumb float-sm-right">
-          <li class="breadcrumb-item"><a href="./">Home</a></li>
+          <li class="breadcrumb-item"><a href="<?= base_url('?p=dashboard')?>">Dashboard</a></li>
           <li class="breadcrumb-item active">Data Petugas</li>
         </ol>
       </div><!-- /.col -->
@@ -32,15 +32,15 @@
               </div>
             </div>
           </div>
-          <div class="card-body">
+          <div class="card-body table table-responsive">
             <table id="data_petugas" class="table table-striped">
               <thead>
                 <tr>
-                  <th>No</th>
-                  <th>Username</th>
-                  <th>Nama Petugas</th>
-                  <th>Level</th>
-                  <th>#</th>
+                  <th width="1%">No</th>
+                  <th width="30%">Username</th>
+                  <th width="40%">Nama Petugas</th>
+                  <th width="19%">Level</th>
+                  <th width="10%">#</th>
                 </tr>
               </thead>
             </table>

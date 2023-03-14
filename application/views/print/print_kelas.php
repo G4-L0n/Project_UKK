@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="<?= base_url('assets/vendor/DataTables/dataTables.min.css')?>">   
     <link rel="stylesheet" href="<?= base_url('assets/dist/css/adminlte.min.css')?>">
-    <title align="center">Data Kelas</title>
+    <title>Data Kelas</title>
 </head>
 <center>
 <body>

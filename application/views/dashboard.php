@@ -7,8 +7,7 @@
       </div><!-- /.col -->
       <div class="col-sm-6">
         <ol class="breadcrumb float-sm-right">
-          <li class="breadcrumb-item"><a href="#">Home</a></li>
-          <li class="breadcrumb-item active">Dashboard</li>
+          <li class="breadcrumb-item"><a href="#">Dashboard</a></li>
         </ol>
       </div><!-- /.col -->
     </div><!-- /.row -->
@@ -68,20 +67,19 @@
           <div class="card-header border-0">
             <h3 class="card-title">History Pembayaran</h3>
           </div>
-          <div class="card-body">
+          <div class="card-body table table-responsive">
             <table id="data_pembayaran" class="table table-striped">
               <thead>
                 <tr>
-                  <th>No</th>
-                  <th>Id</th>
-                  <th>Petugas</th>
-                  <th>Nama Siswa</th>
-                  <th>Tanggal dibayar</th>
-                  <th>Bulan dibayar</th>
-                  <th>Tahun dibayar</th>
-                  <th>Nominal</th>
-                  <th>Jumlah Bayar</th>
-                  <th>#</th>
+                  <th width="1%">No</th>
+                  <th width="1%">Id</th>
+                  <th width="20%">Petugas</th>
+                  <th width="20%">Nama Siswa</th>
+                  <th width="20%">Tanggal dibayar</th>
+                  <th width="4%">Bulan dibayar</th>
+                  <th width="4%">Tahun dibayar</th>
+                  <th width="15%">Nominal</th>
+                  <th width="15%">Jumlah Bayar</th>
                 </tr>
               </thead>
             </table>

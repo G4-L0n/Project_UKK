@@ -7,7 +7,7 @@
       </div><!-- /.col -->
       <div class="col-sm-6">
         <ol class="breadcrumb float-sm-right">
-          <li class="breadcrumb-item"><a href="./">Home</a></li>
+          <li class="breadcrumb-item"><a href="<?= base_url('?p=dashboard')?>">Dashboard</a></li>
           <li class="breadcrumb-item active">Data Kelas</li>
         </ol>
       </div><!-- /.col -->
@@ -32,7 +32,7 @@
               </div>
             </div>
           </div>
-          <div class="card-body">
+          <div class="card-body table table-responsive">
             <table id="data_kelas" class="table table-striped">
               <thead>
                 <tr>

@@ -3,12 +3,12 @@
     <div class="container-fluid">
         <div class="row mb-2">
             <div class="col-sm-6">
-                <h1 class="m-0">Halal</h1>
+                <h1 class="m-0">Profil Diri</h1>
                 </div><!-- /.col -->
                     <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
-                        <li class="breadcrumb-item"><a href="#">Home</a></li>
-                        <li class="breadcrumb-item active">Dashboard</li>
+                        <li class="breadcrumb-item"><a href="./">Dashboard</a></li>
+                        <li class="breadcrumb-item active">Profil Diri</li>
                     </ol>
                 </div><!-- /.col -->
             </div><!-- /.row -->
@@ -30,7 +30,7 @@
                                 <div class="row">
                                     <div class="col-md-2 col-xs-12">
                                         
-                                        <img src="<?= base_url('assets/dist/img/ada.jpg')?>" alt="tidak muncul" class="img-thumbnail">
+                                        <img src="<?= base_url('assets/dist/img/adj.jpg')?>" alt="tidak muncul" class="img-thumbnail">
                                     </div>
                                     <div class="col-md-10 col-xs-12">
                                         <form>

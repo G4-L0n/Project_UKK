@@ -256,23 +256,24 @@
             }
             }
     </style>
+    <title>Login</title>
   </head>
   <body>
     <div class="main">
       <div class="container a-container" id="a-container">
         <form class="form" id="a-form" method="" action="">
-        <img style="margin-bottom:20px" src="<?= base_url('assets/dist/img/ada.jpg') ?>" width="250px">
+        <h1 class="switch__title title">Login Siswa</h1>
         <hr>
-          <input id="nisn" class="form__input" type="text" placeholder="Nisn Siswa">
+          <input id="nisn" class="form__input" type="text" placeholder="Masukan NISN">
           <button id="btn_login_siswa" class="form__button button submit">Masuk</button>
         </form>
       </div>
       <div class="container b-container" id="b-container">
         <div class="form" id="b-form" method="" action="">
-        <img style="margin-bottom:20px" src="<?= base_url('assets/dist/img/adb.jpg') ?>" width="250px">
+        <h1 class="switch__title title">Login Petugas</h1>
         <hr>
           <input id="username" class="form__input" type="text" placeholder="Masukan Username Terdaftar">
-          <input id="password" class="form__input" type="password" placeholder="Masukan Password"><a class="form__link">Lupa Password?</a>
+          <input id="password" class="form__input" type="password" placeholder="Masukan Password">
           <button id="btn_login" class="form__button button" type="button">MASUK</button>
         </div>
       </div>
@@ -280,8 +281,8 @@
         <div class="switch__circle"></div>
         <div class="switch__circle switch__circle--t"></div>
         <div class="switch__container" id="switch-c1">
-          <h2 class="switch__title title">Login Guru</h2>
-          <p class="switch__description description">Masuk Sebagai Staff Pengajar</p>
+          <h2 class="switch__title title">Login Petugas</h2>
+          <p class="switch__description description">Masuk Sebagai Staff</p>
           <button class="switch__button button switch-btn">Masuk</button>
         </div>
         <div class="switch__container is-hidden" id="switch-c2">
