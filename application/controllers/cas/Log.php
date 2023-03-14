@@ -57,7 +57,6 @@ class Log extends CI_Controller {
   function siswa(){
     $nisn = $this->input->post('nisn');
 
-
     //1. Check_All_Request
     if(strlen($nisn) > 0){
       //2. Check_user

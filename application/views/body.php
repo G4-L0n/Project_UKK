@@ -66,6 +66,7 @@
               </p>
             </a>
           </li>
+          <?php if($this->session->userdata('level') < "3") { ?>
           <li class="nav-item">
             <a class="nav-link  <?= ($this->input->get("p") == "data_pembayaran") ? "active" : ""?>  "href="<?= base_url('?p=data_pembayaran')?>" >
             <i class="fas fa-money-check-alt"></i>
@@ -74,6 +75,7 @@
               </p>
             </a>
           </li>
+          <?php } ?>
           <?php if($this->session->userdata('level') == "0") { ?>
           <li class="nav-item">
             <a class="nav-link  <?= ($this->input->get("p") == "data_kelas") ? "active" : ""?>   "href="<?= base_url('?p=data_kelas')?>" >

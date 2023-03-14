@@ -24,6 +24,7 @@ class Welcome extends CI_Controller {
 		$this->load->model('Model_petugas');
 		$this->load->model('Model_siswa');
 	}
+	
 	public function index()
 	{
 		if($this->session->userdata("status") == "online"){

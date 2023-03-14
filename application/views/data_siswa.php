@@ -40,8 +40,8 @@
                   <th width="10%">NISN</th>
                   <th width="12%">NIS</th>
                   <th width="13%">Nama Lengkap</th>
-                  <th width="4%">Kelas</th>
-                  <th width="25%">Alamat</th>
+                  <th width="9%">Kelas</th>
+                  <th width="20%">Alamat</th>
                   <th width="15%">Nomor Telepon</th>
                   <th width="10%">SPP</th>
                   <th width="10%">#</th>

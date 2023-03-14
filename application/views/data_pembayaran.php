@@ -26,13 +26,11 @@
               <div>
                 <?php if($this->session->userdata('level') == "0") { ?>
                   <a class="btn btn-warning" href="<?php echo base_url('pembayaran/cetak')?>"><i class="fa fa-print"></i> Print</a>  
+                <?php } ?>  
                   <!-- Button trigger modal -->
-                  <?php if($this->session->userdata('level') < "3") { ?>
-                    <button id="tambah_data" type="button" class="btn btn-primary" data-toggle="modal" data-backdrop="static" data-target="#exampleModal">
-                      <i class="fas fa-plus-circle"></i>&nbsp;Tambah Data
-                    </button>
-                  <?php } ?>
-                <?php } ?>
+                <button id="tambah_data" type="button" class="btn btn-primary" data-toggle="modal" data-backdrop="static" data-target="#exampleModal">
+                  <i class="fas fa-plus-circle"></i>&nbsp;Tambah Data
+                </button>              
               </div>
             </div>
           </div>
@@ -49,7 +47,9 @@
                   <th width="4%">Tahun dibayar</th>
                   <th width="10%">Nominal</th>
                   <th width="10%">Jumlah Bayar</th>
-                  <th width="10%">#</th>
+                  <?php if($this->session->userdata('level') == "0") { ?>
+                    <th width="10%">#</th>
+                  <?php } ?>
                 </tr>
               </thead>
             </table>
@@ -85,7 +85,7 @@
         </div>
         </div>
         <div class="mb-3 row">
-        <label for="nisn" class="col-sm-4 col-form-label">NISN</label>
+        <label for="nisn" class="col-sm-4 col-form-label">Nama Siswa</label>
         <div class="col-sm-8">
           <select class="form-control" id="nisn" style="width:100%">
           <option></option>
@@ -125,16 +125,7 @@
        <div class="mb-3 row">
         <label for="tahun_dibayar" class="col-sm-4 col-form-label">Tahun Dibayar</label>
         <div class="col-sm-8">
-        <select id="tahun_dibayar" class="form-control">
-            <option value="2018">2018</option>
-      	    <option value="2019">2019</option>
-            <option value="2020">2020</option>
-      	    <option value="2021">2021</option>
-            <option value="2022">2022</option>
-      	    <option value="2023">2023</option>
-            <option value="2024">2024</option>
-      	    <option value="2025">2025</option>
-          </select>
+        <input type="text" class="form-control" id="tahun_dibayar">
         </div>
         </div>
        <div class="mb-3 row">
