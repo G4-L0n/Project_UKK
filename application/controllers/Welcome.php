@@ -2,13 +2,6 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Welcome extends CI_Controller {
-	public function __construct()
-	{
-		parent::__construct();
-		$this->load->model('Model_kelas');
-		$this->load->model('Model_petugas');
-		$this->load->model('Model_siswa');
-	}
 	/**
 	 * Index Page for this controller.
 	 *
@@ -24,6 +17,13 @@ class Welcome extends CI_Controller {
 	 * map to /index.php/welcome/<method_name>
 	 * @see https://codeigniter.com/userguide3/general/urls.html
 	 */
+	public function __construct()
+	{
+		parent::__construct();
+		$this->load->model('Model_kelas');
+		$this->load->model('Model_petugas');
+		$this->load->model('Model_siswa');
+	}
 	public function index()
 	{
 		if($this->session->userdata("status") == "online"){

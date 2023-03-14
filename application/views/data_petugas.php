@@ -23,11 +23,13 @@
           <div class="card-header border-0">
             <div class="d-flex justify-content-between">
               <h3 class="card-title">Data Petugas</h3>
-              <a class="btn btn-warning" href="<?php echo base_url('petugas/cetak')?>"><i class="fa fa-print"></i> Print</a>
-              <!-- Button trigger modal -->
-              <button id="tambah_data" type="button" class="btn btn-primary" data-toggle="modal" data-backdrop="static" data-target="#exampleModal">
-                <i class="fas fa-plus-circle"></i>&nbsp;Tambah Data
-              </button>
+              <div>
+                <a class="btn btn-warning" href="<?php echo base_url('petugas/cetak')?>"><i class="fa fa-print"></i> Print</a>
+                <!-- Button trigger modal -->
+                <button id="tambah_data" type="button" class="btn btn-primary" data-toggle="modal" data-backdrop="static" data-target="#exampleModal">
+                  <i class="fas fa-plus-circle"></i>&nbsp;Tambah Data
+                </button>
+              </div>
             </div>
           </div>
           <div class="card-body">

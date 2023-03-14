@@ -1,33 +1,35 @@
 <?php
 class Model_spp extends CI_Model {
-    
-    function data_spp($id = ""){
-        if($id != "")
-          $query = $this->db->get_where("spp", array("id_spp" => $id));
-        else
-          $query = $this->db->get("spp");
+  //READ
+  function data_spp($id = ""){
+      if($id != "")
+        $query = $this->db->get_where("spp", array("id_spp" => $id));
+      else
+        $query = $this->db->get("spp");
+      return $query;
+  }
 
-        return $query;
-    }
-    
-    function insert_data($data){
-      return $this->db->insert("spp", $data);
-    }
+  //CREATE
+  function insert_data($data){
+    return $this->db->insert("spp", $data);
+  }
 
-    
-    function delete_data($where){
-             $this->db->where($where);
-      return $this->db->delete("spp");
-    }
+  //DELETE
+  function delete_data($where){
+           $this->db->where($where);
+    return $this->db->delete("spp");
+  }
 
-    
-    function update_data($data, $where){
-            $this->db->set($data);
-            $this->db->where($where);
-     return $this->db->update("spp");
-    }
-    function cetak(){
-      return $this->db->get("spp");
-    }
+  //UPDATE
+  function update_data($data, $where){
+           $this->db->set($data);
+           $this->db->where($where);
+    return $this->db->update("spp");
+  }
+  
+  //PRINT
+  function cetak(){
+    return $this->db->get("spp");
+  }
 }
 ?>
